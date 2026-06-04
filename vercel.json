@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "buildCommand": "cd floodguard_api && pip install -r requirements.txt && python manage.py collectstatic --noinput --clear",
+  "outputDirectory": "floodguard_api/staticfiles",
+  "env": {
+    "DEBUG": "False",
+    "PYTHONUNBUFFERED": "1"
+  }
+}
+
