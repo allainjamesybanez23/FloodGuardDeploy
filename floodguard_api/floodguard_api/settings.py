@@ -126,7 +126,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Serve Ionic app from static files
 STATICFILES_DIRS = [
-    BASE_DIR.parent / 'floodguard_ionic' / 'dist',
+    BASE_DIR.parent / 'floodguard_ionic' / 'www',
 ]
 
 # CORS — allows Ionic app to call this API
