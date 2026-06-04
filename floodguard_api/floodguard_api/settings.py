@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*@0cu)fwt9*u=fu%ctj3dg+k-*&e7fj%gv-ecel-__qhbp93ge'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']  # Update this for production with your domain
 
 
 # Application definition
@@ -121,6 +121,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Serve Ionic app from static files
+STATICFILES_DIRS = [
+    BASE_DIR.parent / 'floodguard_ionic' / 'dist',
+]
 
 # CORS — allows Ionic app to call this API
 CORS_ALLOW_ALL_ORIGINS = True
